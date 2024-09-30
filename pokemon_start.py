@@ -53,7 +53,9 @@ print(f'Height: {cpu_height} m')
 print(f'HP: {cpu_hp}')
 print(f'Attack: {cpu_attack}')
 
+# Print the initial battle message showing both Pokémon
 print(f"Your {pokemon_data['name'].capitalize()} VS my {cpu_pokemon_data['name'].capitalize()}! Let's fight!")
+# Added a pause for user to read
 time.sleep(4)
 while player_hp > 0 and cpu_hp > 0:
     cpu_hp -= player_attack
