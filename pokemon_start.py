@@ -59,15 +59,17 @@ print(f"Your {pokemon_data['name'].capitalize()} VS my {cpu_pokemon_data['name']
 # Added a pause for user to read
 time.sleep(4)
 while player_hp > 0 and cpu_hp > 0:
+# subtract player attack from the cpu hp
     cpu_hp -= player_attack
     print(f"Your {pokemon_data['name'].capitalize()} attacks {cpu_pokemon_data['name'].capitalize()} and "
           f"deals {player_attack} damage! CPU HP is now {cpu_hp}!")
 
+# if cpu hp is less than or equal to 0, then it will output winning message
     if cpu_hp <= 0:
         print(f"Your {pokemon_data['name'].capitalize()} wins!")
         break
     time.sleep(4)
-
+# subtract cpu attack from player hp
     player_hp -= cpu_attack
     print(f"My {cpu_pokemon_data['name'].capitalize()} attacks {pokemon_data['name'].capitalize()} and deals "
           f"{cpu_attack} damage! Player HP is now {player_hp}!")
